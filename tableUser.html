@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Usuarios</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+    <script src="js/tablaUser.js"></script>
+</head>
+<body onload="getUser()">
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark ">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ocho Bits LTDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+    
+                  <a class="nav-link active ps-5" aria-current="page" href="./index.html">
+                    <div class="sb-nav-link-icon "><i class="fas fa-home "></i></div>
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item" class="nav-link active ps-5"> <a href="registroProductos.html"> Lista de Productors</a></li>                 
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <div class="container" id="myListUser">
+        
+    </div>
+    
+</body>
+</html>

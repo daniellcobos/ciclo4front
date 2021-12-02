@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario de usurio</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link rel="stylesheet" href="css/registrar.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/userForm.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark ">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ocho Bits LTDA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+    
+                  <a class="nav-link active ps-5" aria-current="page" href="./index.html">
+                    <div class="sb-nav-link-icon "><i class="fas fa-home "></i></div>
+                    Home
+                  </a>
+                </li>  
+                <li class="nav-item" class="nav-link active ps-5"> <a href="registroProductos.html"> Lista de Productors</a></li>               
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    <form id="userForm" class="form " action="" method="post">
+                        <h3 class="text-center text-white">Formulario de usuario</h3>
+                        <div class="form-group">
+                            <label for="identificationUser" class="text-white ">Identificación:</label><br />
+                            <input type="number" name="identificationUser" id="identificationUser" class="form-control"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="nameUser" class="text-white">Nombre</label><br/>
+                            <input type="text" name="nameUser" id="nameUser" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="addressUser" class="text-white">Dirección</label><br>
+                            <input type="text" name="addressUser" id="addressUser"class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cellPhoneUser" class="text-white">Telefono</label><br>
+                            <input type="number" name="cellPhone" id="cellphoneUser"  class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailUser" class="text-white">Correo</label>
+                            <input type="email" name="emailUser" id="emailUser" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordUser" class="text-white">Contraseña</label><br>
+                            <input type="password" name="passwordUser" id="passwordUser" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zoneUser" class="text-white">Zona</label><br>
+                            <input type="text" name="zoneUser" id="zoneUser" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="typeUser" class="text-white">Tipo Usuario</label><br>
+                            <select name="typeUser" id="typeUser"class="form-control" required>
+                                <option selected value="">Selecciona tipo de usuario</option> 
+                                <option value="coordinadorZona">Coordinador de zona</option>
+                                <option value="asesorComercial">Asesor Comercial</option>                                                             
+                              </select >                            
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <input type="submit" name="guardaeDatos" class="btn btn-dark btn-md" value="Guardar" onclick=""/>  
+            <input class="btn btn-dark btn-md" value="Cancelar" onclick="saveUser()"/>                               
+        </div>
+       
+       </form>
+    </div>
+</body>
+
+</html>
