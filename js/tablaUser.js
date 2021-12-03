@@ -1,3 +1,6 @@
+
+let currentUser = 0
+
 function getUser() {
     $.ajax({
         url: "http://132.226.165.142/api/user/all",
@@ -33,7 +36,7 @@ function printListUser(response) {
         myTable += "<td>" + response[i].zone + "</td>";
         myTable += "<td>" + response[i].type + "</td>";
         myTable += '<td><button class = "" onclick="borrar(' + response[i].id + ')">Borrar User!</button></td>';
-        myTable += '<td><button class = "" onclick="updateData(' + response[i].id + ')">Editar User!</button></td>';
+        myTable += '<td><button class = "" onclick="showEdit(' + response[i].id + ')">Editar User!</button></td>';
         myTable += '<td><button class = "" onclick="loadData(' + response[i].id + ')">Actualizar User!</button></td>';
         myTable += "</tr>";
     }
@@ -70,7 +73,7 @@ function borrar(idUser) {
 function loadData(idUser) {
     $.ajax({
         dataType: 'json',
-        url: "http://localhost:8000/api/user/" + idUser,
+        url: "http://132.226.165.142/api/user/" + idUser,
         type: 'GET',
 
         success: function (response) {
@@ -90,8 +93,16 @@ function loadData(idUser) {
     });
 }
 
-function updateData(idUser) {
 
+function showEdit(idData){
+    currentUser = idData
+  editForm = document.getElementById("editForm")
+  editForm.style.visibility="visible"
+
+}
+
+function updateUser() {
+   idUser = currentUser
     if ($("#identificationUser").val().length == 0 || $("#nameUser").val().length == 0 || $("#addressUser").val().length == 0 
     || $("#cellphoneUser").val().length == 0 ||  $("#emailUser").val().length== 0  || $("#passwordUser").val().length==0
     || $("#zoneUser").val().length==0 ||   $("#typeUser").val().length==0)  {
@@ -116,13 +127,11 @@ function updateData(idUser) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",            
-            url: "http://localhost:8080/api/user/update",
+            url: "http://132.226.165.142/api/user/update",
             type: "PUT",
 
             success: function (response) {
                 console.log(response);
-                $("#myListUser").empty();
-                getUser();
                 alert("se ha Actualizado Correctamente!")               
             },
             error: function (jqXHR, textStatus, errorThrown) {

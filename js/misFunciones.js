@@ -24,7 +24,6 @@ function pintarRespuesta(respuesta){
         myTable+="<td>"+respuesta[i].description+"</td>";
         myTable+="<td>"+respuesta[i].availability+"</td>";
         myTable+="<td>"+respuesta[i].photography+"</td>";
-        myTable+="<td> <button onclick=' agregarProducto("+respuesta[i].idClient+")'>Agregar</button>";
         myTable+="<td> <button onclick='editarProducto("+JSON.stringify(respuesta[i].reference)+")'>Editar</button>";
         myTable+="<td> <button onclick='borrarProducto("+JSON.stringify(respuesta[i].reference)+")'>Eliminar</button>";
         myTable+="</tr>";
