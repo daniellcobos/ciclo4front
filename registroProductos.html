@@ -88,6 +88,52 @@
             </div>
         </div>
     </div>
+    <div class="container" id="editForm" style="visibility: hidden">
+      <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+              <div id="login-box" class="col-md-12">
+                <form id="userForm" class="form " method="post" action="#">
+                  <h3 class="text-center text-white">Registrar Producto</h3>
+                  <div class="form-group">
+                      <label for="brandProd" class="text-white ">Marca</label><br />
+                      <input type="text" name="brandProd" id="brandProd" class="form-control" required />
+                  </div>
+                  <div class="form-group">
+                      <label for="categoriaProd" class="text-white">Categoria</label><br>
+                      <input type="text" name="categoriaProd" id="categoriaProd" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="presentacionProd" class="text-white">Presentacion</label><br>
+                      <input type="text" name="presentacionProd" id="presentacionProd" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="fotoProd" class="text-white">Fotografia</label>
+                      <input type="text" name="fotoProd" id="fotoProd" class="form-control"
+                          required>
+                  </div>
+                  <div class="form-group">
+                      <label for="descProd" class="text-white">Descripción</label>
+                      <input type="text" name="descProd" id="descProd" class="form-control"
+                          required>
+                  </div>
+                  <div class="form-group">
+                      <label for="priceProd" class="text-white">Precio</label><br>
+                      <input type="number" name="priceProd" id="priceProd" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="quantityProd" class="text-white">Cantidad</label><br>
+                      <input type="number" name="quantityProd" id="quantityProd" class="form-control" required>
+                  </div>                          
+          </div>
+      </div>
+  </div>
+  <div class="form-group text-center">
+      <button type="button"  name="guardaeDatos" class="btn btn-dark btn-md" value="Guardar" onclick="editFragance()" > Enviar </button>
+      <input class="btn btn-dark btn-md" value="Cancelar" onclick="" />
+  </div>
+
+  </form>
+  </div>
 </body>
 
 </html>
